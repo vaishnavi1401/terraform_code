@@ -12,7 +12,6 @@ module "key_pair" {
   public_key = tls_private_key.this.public_key_openssh
 }
 
-
 data "aws_vpc" "default" {
   default = true
 }
