@@ -21,6 +21,7 @@ resource "aws_security_group" "allow_http" {
   description = "Allow TCP inbound traffic"
    vpc_id      = data.aws_vpc.default.id
 
+	
   ingress {
     description = "HTTP from VPC"
     from_port   = 80
