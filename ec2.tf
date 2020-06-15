@@ -191,6 +191,8 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     cloudfront_default_certificate = true
   }
 }
+	resource "null_resource" "launchingec2"  {
+
 depends_on = [
     null_resource.nullvolume,
   ]
