@@ -191,4 +191,12 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     cloudfront_default_certificate = true
   }
 }
+depends_on = [
+    null_resource.nullvolume,
+  ]
 
+
+	provisioner "local-exec" {
+	    command = "firefox ${aws_instance.myweb.public_ip}"
+  	}
+}
