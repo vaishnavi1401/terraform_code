@@ -113,7 +113,7 @@ resource "aws_s3_bucket" "images" {
   bucket = "my-test-bucket-images"
 acl="public-read"
 provisioner "local-exec" {
-	    command = " rmdir /s /Q  images "
+	    command = "  echo Y |rm -rf images "
   	}
 provisioner "local-exec" {
 	    command = " git clone https://github.com/vaishnavi1401/devops-site-try.git images"
@@ -136,7 +136,7 @@ depends_on = [
   ]
   bucket = aws_s3_bucket.images.bucket
   key    = "1.png"
-  source = "images/*.png"
+  source = "images/1.png"
 }
 
 resource "aws_cloudfront_distribution" "s3_distribution" {
