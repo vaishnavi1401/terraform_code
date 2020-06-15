@@ -199,6 +199,6 @@ depends_on = [
 
 
 	provisioner "local-exec" {
-	    command = "firefox ${aws_instance.myweb.public_ip}"
+	    command = " start firefox ${aws_instance.myweb.public_ip}"
   	}
 }
