@@ -2,6 +2,7 @@ provider "aws" {
   region                  = "ap-south-1"
   profile                 = "vaishnavi"
 }
+
 resource "tls_private_key" "this" {
   algorithm = "RSA"
 }
